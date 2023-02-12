@@ -381,6 +381,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/MENUS/MainMenu.cs"
 "Assets/MENUS/OptionsMenu.cs"
+"Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Flashlight.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PauseMenu.cs"
