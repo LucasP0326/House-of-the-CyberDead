@@ -4,10 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
-  - Floor
-  - Wall
-  - Ceiling
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -15,9 +13,9 @@ TagManager:
   - Ground
   - Water
   - UI
+  - Enemy
   - Player
-  - Ceiling
-  - Wall
+  - 
   - 
   - 
   - 
