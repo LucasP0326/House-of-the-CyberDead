@@ -31,6 +31,9 @@ public class ProjectileGun : MonoBehaviour
     //bug fixing :D
     public bool allowInvoke = true;
 
+    //equipped
+    public bool equipped;
+
     private void Awake()
     {
         //make sure magazine is full
@@ -49,8 +52,10 @@ public class ProjectileGun : MonoBehaviour
     private void MyInput()
     {
         //Check if allowed to hold down button and take corresponding input
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
-        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
+        if (allowButtonHold) 
+            shooting = Input.GetKey(KeyCode.Mouse0);
+        else 
+            shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
         //Reloading 
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
@@ -58,7 +63,7 @@ public class ProjectileGun : MonoBehaviour
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
 
         //Shooting
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+        if (readyToShoot && shooting && !reloading && bulletsLeft > 0 && !PauseMenu.GameIsPaused && equipped)
         {
             //Set bullets shot to 0
             bulletsShot = 0;
@@ -131,10 +136,16 @@ public class ProjectileGun : MonoBehaviour
     private void Reload()
     {
         reloading = true;
+        //Move to reload position
+        transform.localPosition = new Vector3(0.42f, -0.5f, 1.03f);
+        gameObject.transform.localRotation = Quaternion.Euler(0, 235, -45.5f);
         Invoke("ReloadFinished", reloadTime); //Invoke ReloadFinished function with your reloadTime as delay
     }
     private void ReloadFinished()
     {
+        //Reset gun position
+        transform.localPosition = new Vector3(0.7f, -0.33f, 1.03f);
+        transform.localRotation = Quaternion.Euler(0, -83, 0);
         //Fill magazine
         bulletsLeft = magazineSize;
         reloading = false;
