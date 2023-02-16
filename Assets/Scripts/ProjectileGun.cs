@@ -3,6 +3,12 @@ using TMPro;
 
 public class ProjectileGun : MonoBehaviour
 {
+    //Shoot Audio
+    public AudioSource ShootSFX;
+
+    //Reload Audio
+    public AudioSource ReloadSFX;
+
     //bullet 
     public GameObject bullet;
 
@@ -74,6 +80,8 @@ public class ProjectileGun : MonoBehaviour
 
     private void Shoot()
     {
+        ShootSFX.Play ();
+
         readyToShoot = false;
 
         //Find the exact hit position using a raycast
@@ -139,6 +147,7 @@ public class ProjectileGun : MonoBehaviour
         //Move to reload position
         transform.localPosition = new Vector3(0.42f, -0.5f, 1.03f);
         gameObject.transform.localRotation = Quaternion.Euler(0, 235, -45.5f);
+        ReloadSFX.Play ();
         Invoke("ReloadFinished", reloadTime); //Invoke ReloadFinished function with your reloadTime as delay
     }
     private void ReloadFinished()
