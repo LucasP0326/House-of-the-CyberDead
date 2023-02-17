@@ -11,6 +11,8 @@ TagManager:
   - Gun
   - Enemy
   - Bullet
+  - Door
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -21,8 +23,8 @@ TagManager:
   - Player
   - Ceiling
   - Wall
-  - 
-  - 
+  - Door
+  - Key
   - 
   - 
   - 
