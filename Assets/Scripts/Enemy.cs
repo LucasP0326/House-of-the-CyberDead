@@ -22,6 +22,8 @@ public class Enemy : MonoBehaviour
 
     public float health;
 
+    public Vector3 location;
+
         //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
@@ -53,6 +55,9 @@ public class Enemy : MonoBehaviour
                 UpdateDestination();
             }
         }
+
+        //Get enemy position
+        location = transform.position;
     }
     void UpdateDestination()
     {

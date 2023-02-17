@@ -6,6 +6,7 @@ public class Key : MonoBehaviour
 {
     public Component doorcolliderhere;
     public GameObject keygone;
+    public GameObject enemyPerson;
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +22,14 @@ public class Key : MonoBehaviour
 
         if(Input.GetKey(KeyCode.E))
         keygone.SetActive(false);
+    }
+
+    void Update()
+    {
+        Enemy enemy = enemyPerson.gameObject.GetComponent<Enemy>();
+        if (enemy.health <= 0)
+        {
+            transform.position = enemy.location;
+        }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Open : MonoBehaviour
 {
     public Animation hinge;
+    public AudioSource elevator;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +17,6 @@ public class Open : MonoBehaviour
     {
         if (Input.GetKey (KeyCode.E))
         hinge.Play ();
+        elevator.Play ();
     }
 }
