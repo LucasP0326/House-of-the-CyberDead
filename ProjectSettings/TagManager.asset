@@ -13,6 +13,7 @@ TagManager:
   - Bullet
   - Door
   - Key
+  - Glass
   layers:
   - Default
   - TransparentFX
