@@ -17,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    bool hasGun;
+
+    public GameObject mainCamera;
+
     // Update is called once per frame
     void Update()
     {
@@ -42,5 +46,18 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "Gun" && !hasGun)
+        {
+            collision.transform.parent = mainCamera.transform;
+            collision.transform.localPosition = new Vector3(0.7f, -0.33f, 1.03f);
+            collision.transform.localRotation = Quaternion.Euler(0, -83, 0);
+
+            collision.gameObject.GetComponent<ProjectileGun>().equipped = true;
+            hasGun = true;
+        }
     }
 }
