@@ -3,7 +3,10 @@ guid: 273df3751ce01584f99975263154d13b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - doorcolliderhere: {instanceID: 0}
+  - keygone: {instanceID: 0}
+  - enemyPerson: {fileID: 919132149155446097, guid: 5a07ff015dec30f4392331ba0ab48c1a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
