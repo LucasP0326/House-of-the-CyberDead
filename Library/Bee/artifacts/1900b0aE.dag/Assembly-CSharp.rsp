@@ -387,7 +387,6 @@
 "Assets/Open.cs"
 "Assets/Scripts/CustomBullet.cs"
 "Assets/Scripts/Enemy.cs"
-"Assets/Scripts/EnemyHealth.cs"
 "Assets/Scripts/Flashlight.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/PauseMenu.cs"

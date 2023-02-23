@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jump = 1f;
+    public int health;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -59,5 +60,9 @@ public class PlayerMovement : MonoBehaviour
             collision.gameObject.GetComponent<ProjectileGun>().equipped = true;
             hasGun = true;
         }
+    }
+
+    public void Death(){
+        Debug.Log("You died!");
     }
 }

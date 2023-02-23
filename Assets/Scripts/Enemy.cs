@@ -21,18 +21,34 @@ public class Enemy : MonoBehaviour
     public LayerMask obstructionMask;
 
     public float health;
+    public int damageFromBullet;
 
     public Vector3 location;
 
-        //Attacking
+    public float angleX;
+    public float angleY;
+    public float angleZ;
+
+    //Attacking
     public float timeBetweenAttacks;
     bool alreadyAttacked;
-    public GameObject projectile;
+    public int attackDamage;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
+    }
+
+    //Detect Collision with Bullet
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            //Debug.Log("shot!");
+            Destroy(collision.gameObject);
+            TakeDamage(damageFromBullet);
+        }
     }
 
     void Update()
@@ -45,6 +61,10 @@ public class Enemy : MonoBehaviour
             Vector3 dirToPlayer = transform.position - player.transform.position;
             Vector3 newPos = transform.position - dirToPlayer;
             agent.SetDestination(newPos);
+
+            float distance = Vector3.Distance (transform.position, player.transform.position);
+            if (distance <= 5) AttackPlayer();
+            
         }
         else
         {
@@ -55,7 +75,6 @@ public class Enemy : MonoBehaviour
                 UpdateDestination();
             }
         }
-
         //Get enemy position
         location = transform.position;
     }
@@ -83,12 +102,13 @@ public class Enemy : MonoBehaviour
                 //Obstruction check
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                 {
-                    //Debug.Log("Sees player");
+                    //Debug.Log("sees player");
                     seesPlayer = true;
                     seenPlayer = true;
                 }
                 else
                 {
+                    //Debug.Log("Obstructed");
                     seesPlayer = false;
                     if (seenPlayer)
                     {
@@ -99,6 +119,7 @@ public class Enemy : MonoBehaviour
             }
             else
             {
+                //Debug.Log("out of fov");
                 seesPlayer = false;
                 if (seenPlayer)
                 {
@@ -121,26 +142,25 @@ public class Enemy : MonoBehaviour
     private IEnumerator ForgetPlayer()
     {
         yield return new WaitForSeconds(10);
-        Debug.Log("Player Forgotten");
+        //Debug.Log("Player Forgotten");
         UpdateDestination();
     }
 
-        private void AttackPlayer()
+    private void AttackPlayer()
     {
 
         if (!alreadyAttacked)
         {
-            ///Attack code here
-            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
-            ///End of attack code
+            //Debug.Log("attack!");
+            player.GetComponent<PlayerMovement>().health -= attackDamage;
+            if (player.GetComponent<PlayerMovement>().health == 0)player.GetComponent<PlayerMovement>().Death();
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }
-        private void ResetAttack()
+
+    private void ResetAttack()
     {
         alreadyAttacked = false;
     }
@@ -151,6 +171,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
+
     private void DestroyEnemy()
     {
         Destroy(gameObject);
