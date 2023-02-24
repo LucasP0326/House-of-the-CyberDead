@@ -385,6 +385,7 @@
 "Assets/MENUS/MainMenu.cs"
 "Assets/MENUS/OptionsMenu.cs"
 "Assets/Open.cs"
+"Assets/RetryGame.cs"
 "Assets/Scripts/CustomBullet.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/Flashlight.cs"
