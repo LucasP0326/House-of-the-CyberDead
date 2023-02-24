@@ -36,8 +36,11 @@ public class Enemy : MonoBehaviour
 
     public AudioSource InjuredSFX;
 
+    public Light lt;
+
     void Start()
     {
+        lt.color = Color.yellow;
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
     }
@@ -47,6 +50,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            InjuredSFX.Play ();
             //Debug.Log("shot!");
             Destroy(collision.gameObject);
             TakeDamage(damageFromBullet);
@@ -55,6 +59,21 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (seesPlayer == true)
+        {
+            lt.color = Color.red;
+        }
+
+        if (seenPlayer == true && seesPlayer == false)
+        {
+            lt.color = Color.yellow;
+        }
+
+        if (seesPlayer == false && seenPlayer == false)
+        {
+            lt.color = Color.yellow;
+        }
+
         //look for player
         FieldOfViewCheck();
         if (seesPlayer)
@@ -170,8 +189,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-
-        InjuredSFX.Play ();
 
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }

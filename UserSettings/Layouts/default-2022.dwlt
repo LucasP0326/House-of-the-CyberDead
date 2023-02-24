@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 94
+  controlID: 52
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 41
+  controlID: 53
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 42
+  controlID: 54
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,10 +298,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 223.2
-    y: 73.6
-    width: 929.2
-    height: 434.2
+    x: 279
+    y: 73
+    width: 1161
+    height: 570
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -315,14 +315,14 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 8974765639586227059, guid: bab8ab6514eb98a42ac468463ce46883, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.67329484
+    - e00: 1.3542365
       e01: 0
       e02: 0
-      e03: 32.864788
+      e03: -194.48053
       e10: 0
-      e11: 0.67329484
+      e11: 1.3542365
       e12: 0
-      e13: 166.01189
+      e13: 159.02448
       e20: 0
       e21: 0
       e22: 1
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 1
+  m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 --- !u!114 &13
@@ -574,23 +574,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Models
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets
+  - Assets/Models
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\lucas\Documents\GitHub\House-of-the-CyberDead
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 61}
-    m_SelectedIDs: 98400200
-    m_LastClickedID: 147608
-    m_ExpandedIDs: 000000009840020000ca9a3b
+    m_SelectedIDs: 064e0100
+    m_LastClickedID: 85510
+    m_ExpandedIDs: 00000000924d010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -618,7 +618,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098400200
+    m_ExpandedIDs: 00000000924d0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -714,7 +714,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 648
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -756,23 +756,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: bc450200
-      m_LastClickedID: 148924
-      m_ExpandedIDs: daf8feffc0e5ffff9c440200ca440200
+      m_SelectedIDs: 3a610000
+      m_LastClickedID: 24890
+      m_ExpandedIDs: 1cfbffff3a610000086200003662000066620000b86200002a630000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: jeremymixamover2
+        m_OriginalName: jeremymixamover2
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 25386
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -1150,9 +1150,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -68.52518, y: 24.723173, z: 170.43132}
+    m_Target: {x: -13.086312, y: 30.06025, z: -35.82524}
     speed: 2
-    m_Value: {x: -68.52518, y: 24.723173, z: 170.43132}
+    m_Value: {x: -13.086312, y: 30.06025, z: -35.82524}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1198,13 +1198,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.024753693, y: 0.91021055, z: -0.05495756, w: -0.4097703}
+    m_Target: {x: -0.09389248, y: 0.85509723, z: -0.16648449, w: -0.48204458}
     speed: 2
-    m_Value: {x: -0.024670884, y: 0.9108115, z: -0.054993864, w: -0.40839884}
+    m_Value: {x: -0.0938882, y: 0.8550583, z: -0.1664769, w: -0.4820226}
   m_Size:
-    m_Target: 5.288438
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 5.288438
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 0
     speed: 2
