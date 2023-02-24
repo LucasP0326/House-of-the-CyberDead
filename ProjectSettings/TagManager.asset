@@ -14,6 +14,7 @@ TagManager:
   - Door
   - Key
   - Glass
+  - WinBox
   layers:
   - Default
   - TransparentFX

@@ -61,11 +61,21 @@ public class PlayerMovement : MonoBehaviour
             collision.gameObject.GetComponent<ProjectileGun>().equipped = true;
             hasGun = true;
         }
+        if (collision.gameObject.tag == "WinBox")
+        {
+            Win();
+        }
     }
 
     public void Death(){
         Debug.Log("You died!");
 
               SceneManager.LoadScene("Lose", LoadSceneMode.Additive);
+    }
+
+    //Win State
+    public void Win()
+    {
+        SceneManager.LoadScene("Win", LoadSceneMode.Additive);
     }
 }

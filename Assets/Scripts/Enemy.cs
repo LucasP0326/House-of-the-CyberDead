@@ -34,6 +34,8 @@ public class Enemy : MonoBehaviour
     bool alreadyAttacked;
     public int attackDamage;
 
+    public AudioSource InjuredSFX;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -168,6 +170,8 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+
+        InjuredSFX.Play ();
 
         if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
