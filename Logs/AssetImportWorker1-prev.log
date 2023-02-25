@@ -15,7 +15,7 @@ C:/Users/lucas/Documents/GitHub/House-of-the-CyberDead
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-65254
+55525
 Successfully changed project path to: C:/Users/lucas/Documents/GitHub/House-of-the-CyberDead
 C:/Users/lucas/Documents/GitHub/House-of-the-CyberDead
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/lucas/Documents/GitHub/House-of-the-CyberDead
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [10824] Host "[IP] 10.127.168.149 [Port] 0 [Flags] 2 [Guid] 2271633738 [EditorId] 2271633738 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-J6R49HR3) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [17552] Host "[IP] 10.127.168.149 [Port] 0 [Flags] 2 [Guid] 3969726580 [EditorId] 3969726580 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-J6R49HR3) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [10824] Host "[IP] 10.127.168.149 [Port] 0 [Flags] 2 [Guid] 2271633738 [EditorId] 2271633738 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-J6R49HR3) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [17552] Host "[IP] 10.127.168.149 [Port] 0 [Flags] 2 [Guid] 3969726580 [EditorId] 3969726580 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-J6R49HR3) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 22.82 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 9.90 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.5f1 (551d45108343)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/Resources/UnitySubsystems
@@ -67,41 +67,41 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56724
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56740
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.2.5f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007863 seconds.
-- Loaded All Assemblies, in  0.376 seconds
+Registered in 0.011137 seconds.
+- Loaded All Assemblies, in  0.387 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.280 seconds
+- Finished resetting the current domain, in  0.364 seconds
 Domain Reload Profiling:
-	ReloadAssembly (213ms)
-		BeginReloadAssembly (81ms)
+	ReloadAssembly (231ms)
+		BeginReloadAssembly (92ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (79ms)
+			LoadAssemblies (90ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (154ms)
-				TypeCache.Initialize (152ms)
-					TypeCache.ScanAssembly (151ms)
+			SetupTypeCache (150ms)
+				TypeCache.Initialize (148ms)
+					TypeCache.ScanAssembly (146ms)
 				ResolveRequiredComponents (1ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (216ms)
+			SetupLoadedEditorAssemblies (292ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (9ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (12ms)
 				RefreshPlugins (0ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (145ms)
-				ProcessInitializeOnLoadMethodAttributes (53ms)
+				ProcessInitializeOnLoadAttributes (206ms)
+				ProcessInitializeOnLoadMethodAttributes (62ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -111,48 +111,48 @@ Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\lucas\Documents\GitHub\House-of-the-CyberDead\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\lucas\Documents\GitHub\House-of-the-CyberDead\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-- Loaded All Assemblies, in  1.143 seconds
-Refreshing native plugins compatible for Editor in 5.01 ms, found 4 plugins.
+- Loaded All Assemblies, in  1.245 seconds
+Refreshing native plugins compatible for Editor in 4.64 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.749 seconds
+- Finished resetting the current domain, in  0.729 seconds
 Domain Reload Profiling:
-	ReloadAssembly (255ms)
-		BeginReloadAssembly (117ms)
+	ReloadAssembly (291ms)
+		BeginReloadAssembly (168ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		LoadAllAssembliesAndSetupDomain (878ms)
-			LoadAssemblies (334ms)
+			CreateAndSetChildDomain (34ms)
+		LoadAllAssembliesAndSetupDomain (950ms)
+			LoadAssemblies (340ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (595ms)
-				TypeCache.Initialize (289ms)
-					TypeCache.ScanAssembly (281ms)
-				ResolveRequiredComponents (20ms)
+			SetupTypeCache (679ms)
+				TypeCache.Initialize (332ms)
+					TypeCache.ScanAssembly (324ms)
+				ResolveRequiredComponents (14ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (478ms)
+			SetupLoadedEditorAssemblies (484ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (5ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (6ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (86ms)
-				ProcessInitializeOnLoadAttributes (319ms)
-				ProcessInitializeOnLoadMethodAttributes (51ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (338ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 9.50 ms, found 4 plugins.
+			AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 4.84 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4038 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 37 unused Assets / (70.7 KB). Loaded Objects now: 4501.
+Unloading 37 unused Assets / (70.8 KB). Loaded Objects now: 4501.
 Memory consumption went from 0.61 GB to 0.61 GB.
-Total: 7.172500 ms (FindLiveObjects: 0.898800 ms CreateObjectMapping: 0.722400 ms MarkObjects: 5.220600 ms  DeleteObjects: 0.326900 ms)
+Total: 3.600300 ms (FindLiveObjects: 0.496600 ms CreateObjectMapping: 0.197100 ms MarkObjects: 2.660800 ms  DeleteObjects: 0.243200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -167,66 +167,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1982.013772 seconds.
-  path: Assets/Prefabs/Enemy (Upstairs).prefab
-  artifactKey: Guid(ce70af94bf8aa7d4fbcaf7f5257afe90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemy (Upstairs).prefab using Guid(ce70af94bf8aa7d4fbcaf7f5257afe90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1249c5112ce39179b456afe066498096') in 0.113107 seconds 
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+  Time since last request: 14230.216466 seconds.
+  path: Assets/Prefabs/Wall New.prefab
+  artifactKey: Guid(a332ea5323f81f24da76ee7cb84c2283) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Wall New.prefab using Guid(a332ea5323f81f24da76ee7cb84c2283) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '000ce5e2a69a75e45f5b49a7afb9e6ca') in 0.115342 seconds 
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 94
-========================================================================
-Received Import Request.
-  Time since last request: 4.214354 seconds.
-  path: Assets/one way door/one way/door_lambert1_MetallicSmoothness.png
-  artifactKey: Guid(78248809bcf201047bb20196914b696c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/one way door/one way/door_lambert1_MetallicSmoothness.png using Guid(78248809bcf201047bb20196914b696c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0dbaf32b96dc22944a61f4b830401fe') in 0.030720 seconds 
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/one way door/one way/one way.fbx
-  artifactKey: Guid(fe3410db047296e4083628027bd1bf10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/one way door/one way/one way.fbx using Guid(fe3410db047296e4083628027bd1bf10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '332e1dd87b0347c89a74115af6d2349e') in 0.080286 seconds 
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 18
-========================================================================
-Received Import Request.
-  Time since last request: 55.494222 seconds.
-  path: Assets/Flashlight/newtextures/flashlight_glass_AO.png
-  artifactKey: Guid(800aa18ca26a44e4ca9071d6b781027a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Flashlight/newtextures/flashlight_glass_AO.png using Guid(800aa18ca26a44e4ca9071d6b781027a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76012b3943cc1834caaa7930db49922c') in 0.015406 seconds 
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000109 seconds.
-  path: Assets/Flashlight/newtextures/flashlight_lambert1_AlbedoTransparency.png
-  artifactKey: Guid(d2d38c42b06731047828259c7a71225d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Flashlight/newtextures/flashlight_lambert1_AlbedoTransparency.png using Guid(d2d38c42b06731047828259c7a71225d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcb3507569c5190454bd66046eeb99d4') in 0.018457 seconds 
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Flashlight/newtextures/newflashlight.fbx
-  artifactKey: Guid(40d3d21e013a12d4a82b8696b2ce7f10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Flashlight/newtextures/newflashlight.fbx using Guid(40d3d21e013a12d4a82b8696b2ce7f10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95a48fa82e829f3fc6b84a0158d0769e') in 0.170851 seconds 
-Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
-To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 35
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: The I/O operation has been aborted because of either a thread exit or an application request.
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Number of asset objects unloaded after import = 92
