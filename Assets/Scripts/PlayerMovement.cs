@@ -23,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject mainCamera;
 
+    public AudioSource gameMusic;
+
+    public AudioSource loseMusic;
+
+    public AudioSource winMusic;
+
     // Update is called once per frame
     void Update()
     {
@@ -67,15 +73,20 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Death(){
+    public void Death()
+    {
         Debug.Log("You died!");
 
               SceneManager.LoadScene("Lose", LoadSceneMode.Additive);
+
+        gameMusic.Stop ();
     }
 
     //Win State
     public void Win()
     {
         SceneManager.LoadScene("Win", LoadSceneMode.Additive);
+
+        gameMusic.Stop ();
     }
 }
