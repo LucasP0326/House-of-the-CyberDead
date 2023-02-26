@@ -24,4 +24,5 @@ public class UIHealthBar : MonoBehaviour
     {
         mask.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, originalSize * value);
     }
+
 }

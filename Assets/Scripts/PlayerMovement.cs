@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 12f;
     public float gravity = -9.81f;
     public float jump = 1f;
+    public int health;
+    public int maxHealth = 50;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
@@ -20,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
     bool hasGun;
 
     public GameObject mainCamera;
+
+    public AudioSource gameMusic;
+
+    public AudioSource loseMusic;
+
+    public AudioSource winMusic;
 
     // Update is called once per frame
     void Update()
@@ -59,5 +68,31 @@ public class PlayerMovement : MonoBehaviour
             collision.gameObject.GetComponent<ProjectileGun>().equipped = true;
             hasGun = true;
         }
+        if (collision.gameObject.tag == "WinBox")
+        {
+            Win();
+        }
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        UIHealthBar.instance.SetValue(health / (float)maxHealth);
+    }
+
+    public void Death()
+    {
+        Debug.Log("You died!");
+
+              SceneManager.LoadScene("Lose", LoadSceneMode.Additive);
+
+        gameMusic.Stop ();
+    }
+
+    //Win State
+    public void Win()
+    {
+        SceneManager.LoadScene("Win", LoadSceneMode.Additive);
+
+        gameMusic.Stop ();
     }
 }
