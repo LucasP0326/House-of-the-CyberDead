@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     int waypointIndex;
     Vector3 target;
     public GameObject player;
+    Animator animator;
 
     //fov
     public float viewRadius;
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour
         lt.color = Color.yellow;
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
+        animator = GetComponent<Animator>();
     }
 
     //Detect Collision with Bullet
@@ -175,7 +177,7 @@ public class Enemy : MonoBehaviour
             //Debug.Log("attack!");
             player.GetComponent<PlayerMovement>().health -= attackDamage;
             if (player.GetComponent<PlayerMovement>().health == 0)player.GetComponent<PlayerMovement>().Death();
-
+            animator.SetTrigger("Attack");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -195,6 +197,7 @@ public class Enemy : MonoBehaviour
 
     private void DestroyEnemy()
     {
-        Destroy(gameObject);
+        animator.SetTrigger("Death");
+        agent.speed = 0f;
     }
 }

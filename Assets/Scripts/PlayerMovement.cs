@@ -11,10 +11,13 @@ public class PlayerMovement : MonoBehaviour
     public float gravity = -9.81f;
     public float jump = 1f;
     public int health;
+    public int maxHealth = 50;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+
+    public AudioSource InjuredSFX2;
 
     Vector3 velocity;
     bool isGrounded;
@@ -29,7 +32,16 @@ public class PlayerMovement : MonoBehaviour
 
     public AudioSource winMusic;
 
+    public UIHealthBar healthBar;
+
     // Update is called once per frame
+
+    void Start()
+    {
+        health = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+    }
+    
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -71,6 +83,13 @@ public class PlayerMovement : MonoBehaviour
         {
             Win();
         }
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        health -= amount;
+        healthBar.setHealth(health);
+        InjuredSFX2.Play();
     }
 
     public void Death()
